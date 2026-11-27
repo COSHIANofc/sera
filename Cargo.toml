@@ -1,0 +1,9 @@
+[package]
+name = "sera"
+version = "0.0.0"
+edition = "2024"
+rust-version = "1.100"
+description = "Seismic Event Radar Application"
+repository = "https://github.com/COSHIANofc/sera"
+license-file = "LICENSE"
+publish = false
