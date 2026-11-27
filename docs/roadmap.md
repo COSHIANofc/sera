@@ -1,10 +1,10 @@
 # Roadmap
 
-Only Phase 0 is authorized now. Later milestones are planned and need separate authorization. Phase 0 is in progress until local verification and commit; hosted CI remains unverified. CDL is published and applied; project rights-holder identification and third-party review remain outstanding.
+Phase 0 was completed and committed locally; hosted CI remains unverified. Later milestones are planned and need separate authorization. CDL is published and applied; project rights-holder identification and third-party review remain outstanding.
 
 | Milestone | Status | Scope and completion gate |
 |---|---|---|
-| Phase 0 | In progress | Minimal executable and test, toolchain, CI, dependencies policy, architecture, design and roadmap. Complete when local checks and release build pass, workflow is validated as possible, license status is accurate and local commit exists. |
+| Phase 0 | Completed locally | Minimal executable and test, toolchain, CI, dependency policy, architecture, design and roadmap. Hosted platform checks remain unverified. |
 | v0.0.1 UI prototype | Planned | Ratatui/Crossterm Radar and Alert, labeled simulation, manual and simulated automatic transitions, countdown and location UI prototypes, resize, Japanese text, snapshots and terminal restoration. Both layouts and critical alerts must remain readable; no live API without separate authorization. |
 | v0.1.0 Radar | Planned | Authorized earthquake provider, map, epicenters, observed intensity, history, locations, persistence, connection and freshness, reconnection. Verify data rights and geography; mandatory tests remain offline. |
 | v0.2.0 Alert | Planned | Validated EEW, classification, screen transitions, regional/maximum predictions, provider arrival estimates, report updates, cancellation, final and stale states, multiple events and locations; controllable clock tests. Never fabricate estimates or interpret expiry as safety. |

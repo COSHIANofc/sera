@@ -12,7 +12,7 @@ cargo test --locked
 cargo build --locked --release
 ```
 
-Rust 1.100.0 is pinned in rust-toolchain.toml, including rustfmt and Clippy. Rustup installs the pinned version and components on demand; a non-rustup installation must provide matching tools. Review and update the pin deliberately with its checks. Cargo.lock is committed for the executable.
+Rust 1.100.0 is specified in rust-toolchain.toml, including rustfmt and Clippy. Use rustup-managed proxies to select that toolchain and install its components; check `rustup show active-toolchain` and avoid higher-priority overrides. Homebrew's direct Rust binaries do not enforce this file. When using them, verify `rustc --version`, `cargo --version`, `rustfmt --version` and `cargo clippy --version` manually; an update can change the toolchain independently. The local Phase 0 checks used Homebrew Rust 1.100.0, not rustup. Prefer the pinned rustup toolchain for reproducible development and CI, and review updates with all checks. Cargo.lock is committed for the executable.
 
 CI uses pinned checkout and cache action commits, no persisted checkout credentials, `contents: read`, timeouts and cancellation of superseded runs per workflow and ref/PR. Cargo registry, git and target caches are keyed by OS, architecture, toolchain file and lockfile; never cache credentials. The hosted runner must have rustup and access to the pinned toolchain. Weekly Dependabot updates cover Cargo and Actions, with five PRs each, targeting the verified remote `main`. If the owner later creates remote `develop`, reconsider the target.
 
